@@ -1,0 +1,314 @@
+/*Variables Globales*/
+:root {
+  --bg: #ffffff;
+  --surface: #F8FAFC;
+  --text: #f8f8f8;
+  --muted: #fdfdfd;
+  --primary: #113F67;
+  --secondary: #06B6D4;
+  --accent: #ed3a3a;
+  --gap: 8px;
+  --radius: 12px;
+}
+
+/*Reset y Ajustes Generales*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*Contenedor Principal*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*Encabezado */
+.app-header {
+  background: #33A1E0;
+  border-bottom: 1px solid #eef2f7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+.brand-text h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.brand-text .subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/*Botones*/
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+}
+
+/*Área Principal*/
+.main-area {
+  padding: 28px 0;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/*Tarjetas*/
+.card {
+  background: #58A0C8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
+
+.hero-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  max-width: 56%;
+}
+
+.hero-content h2 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+.hero-content p {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 12px 0 16px 0;
+}
+
+.benefits li {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.hero-art img {
+  width: 220px;
+  max-width: 45vw;
+  border-radius: 8px;
+}
+
+/*Encuesta*/
+.survey-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.survey-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.progress {
+  background: #f1f5f9;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 8px;
+  width: 100%;
+}
+
+.progress > div {
+  background: var(--primary);
+  height: 100%;
+}
+
+.survey-form {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step {
+  display: block;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.survey-form select,
+.survey-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+  background: #fff;
+}
+
+.survey-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.right-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/*Gráficas*/
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+@media (min-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.chart-card canvas {
+  width: 100% !important;
+  height: 220px !important;
+}
+
+/*Acciones de Resultados*/
+.results-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+/*Pie de Página*/
+.app-footer {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.footer-container p,
+.footer-container ul li a,
+.footer-container h3 {
+  color: #111;
+}
+
+/*Ajustes para Pantallas Pequeñas*/
+@media (max-width: 700px) {
+  .hero-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-art img {
+    width: 100%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
+
+.info-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-card {
+    background: #fff;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #555;
+}
