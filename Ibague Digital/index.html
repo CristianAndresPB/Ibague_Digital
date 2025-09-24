@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibagué Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-logo">Ibagué Digital</div>
+            <div class="header-icons">
+                <img src="logo.png" alt="Ibagué Digital" class="logo">
+            </div>
+        </header>
+
+        <div id="homePage" class="page-content page-home">
+            <h1 class="text-3xl font-bold text-center text-gray-800 my-4">Plataforma que impulsa conectividad, innovación, talento y desarrollo tecnológico local</h1>
+            <p class="text-center text-gray-600 mb-8">La plataforma busca diagnosticar la situación digital de Ibagué, fortaleciendo infraestructura, talento humano, conectividad y apropiación tecnológica para impulsar el crecimiento económico, social y cultural de la ciudad.</p>
+            <button id="startBtn" class="btn mx-auto block mb-8">Iniciar</button>
+            <div class="grid gxxid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card">
+                    <img src="icon-quienes.png" alt="Quiénes Somos" class="card-icon">
+                    <h2 class="font-bold text-lg mb-1">Quienes Somos</h2>
+                    <p class="text-sm text-gray-500">Somos un proyecto enfocado en recopilar y analizar los hábitos de consumo de medios digitales en la ciudad de Ibagué, buscando mejorar el acceso a la información y la inclusión tecnológica.</p>
+                </div>
+                <div class="card">
+                    <img src="icon-mision.png" alt="Misión" class="card-icon">
+                    <h2 class="font-bold text-lg mb-1">Misión</h2>
+                    <p class="text-sm text-gray-500">Nuestra misión es promover el uso responsable y productivo de los medios digitales mediante la recopilación de datos y la generación de propuestas que fomenten el desarrollo tecnológico en la ciudad</p>
+                </div>
+                <div class="card">
+                    <img src="icon-vision.png" alt="Visión" class="card-icon">
+                    <h2 class="font-bold text-lg mb-1">Visión</h2>
+                    <p class="text-sm text-gray-500">Ser el proyecto líder en el análisis y optimización del consumo digital en Ibagué, contribuyendo a una comunidad más informada, conectada y preparada para el futuro tecnológico</p>
+                </div>
+                <div class="card">
+                    <img src="icon-historia.png" alt="Historia de Ibagué" class="card-icon">
+                    <h2 class="font-bold text-lg mb-1">Historia de Ibagué</h2>
+                    <p class="text-sm text-gray-500">Ibagué, conocida como la Ciudad Musical de Colombia, cuenta con una rica tradición cultural y un crecimiento digital constante, siendo un centro importante de innovación y desarrollo en la región</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <h3 class="font-bold text-gray-700">Hecho en Ibagué</h3>
+                <p class="text-sm text-gray-500 mt-1">E-mail: contact@ibaguedigital.com</p>
+                <p class="text-sm text-gray-500">Cel: +57 320 892 45 45</p>
+            </div>
+        </div>
+
+        <div id="formPage" class="page-content page-form hidden">
+            <h1 class="text-white text-xl font-bold mt-8">POR FAVOR DILIGENCIAR LOS<br>SIGUIENTES DATOS</h1>
+            
+            <div class="form-fields">
+                <input type="text" id="name" placeholder="Nombres y Apellidos" class="input-field">
+                <input type="text" id="age" placeholder="Edad" class="input-field">
+                <input type="text" id="gender" placeholder="Genero" class="input-field">
+            </div>
+
+            <button id="startSurveyBtn" class="btn mt-16">Iniciar encuesta</button>
+        </div>
+
+        <div id="surveyPage" class="page-content page-survey hidden">
+            <div class="flex justify-between items-center w-full px-8 pt-8">
+                <span class="text-white font-bold text-lg">Bienvenidos</span>
+                <span class="text-white text-sm font-bold">Plataforma digital de desarrollo del ecosistema digital</span>
+            </div>
+            <h1 class="text-white text-xl font-bold mt-8">Encuesta</h1>
+
+            <div class="flex flex-col gap-4 mt-8 w-full max-w-lg">
+                <div class="survey-question">
+                    <label for="q1">1) ¿Cuántas horas al día en promedio, usas Internet?</label>
+                    <select id="q1">
+                        <option value="">Seleccione...</option>
+                        <option value="1-3">1-3 horas</option>
+                        <option value="4-6">4-6 horas</option>
+                        <option value="+6">+6 horas</option>
+                    </select>
+                </div>
+                <div class="survey-question">
+                    <label for="q2">2) ¿Qué dispositivos usas con mayor frecuencia?</label>
+                    <select id="q2">
+                        <option value="">Seleccione...</option>
+                        <option value="smartphone">Smartphone</option>
+                        <option value="laptop">Laptop/PC</option>
+                        <option value="tablet">Tablet</option>
+                    </select>
+                </div>
+                <div class="survey-question">
+                    <label for="q3">3) ¿Cuál es tu red social más utilizada?</label>
+                    <select id="q3">
+                        <option value="">Seleccione...</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                </div>
+                <div class="survey-question">
+                    <label for="q4">4) ¿Con qué frecuencia ves noticias en medios digitales?</label>
+                    <select id="q4">
+                        <option value="">Seleccione...</option>
+                        <option value="daily">Diariamente</option>
+                        <option value="weekly">Semanalmente</option>
+                        <option value="rarely">Raramente</option>
+                    </select>
+                </div>
+                <div class="survey-question">
+                    <label for="q5">5) ¿Prefieres consumir información en formatos?</label>
+                    <select id="q5">
+                        <option value="">Seleccione...</option>
+                        <option value="text">Texto</option>
+                        <option value="video">Video</option>
+                        <option value="audio">Audio</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="finishBtn" class="btn mt-8">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

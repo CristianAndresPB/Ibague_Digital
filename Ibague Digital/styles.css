@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .header {
+            background: linear-gradient(to right, #07121d, #3498db);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .header-icons {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .header-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .page-content {
+            padding: 2rem;
+        }
+        .page-home {
+            background: #fff;
+        }
+        .page-form, .page-survey {
+            background: linear-gradient(to bottom, #b3e0ff, #284b6e);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 600px;
+        }
+        .btn {
+            background-color: #102f4d;
+            color: white;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .hidden {
+            display: none;
+        }
+        .card {
+            background-color: #f8fafc;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 12px auto;
+        }
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            width: 100%;
+            max-width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 4rem;
+            width: 100%;
+            max-width: 600px;
+        }
+        .survey-question {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .survey-question label {
+            color: #1e3a8a;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-align: left;
+        }
+        .survey-question select {
+            width: 100%;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            color: #4b5563;
+        }
+
+.info-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
