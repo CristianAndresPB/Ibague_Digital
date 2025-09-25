@@ -131,12 +131,17 @@
             border: 1px solid #ccc;
             color: #4b5563;
         }
+        /* Cambia el fondo del menú desplegable y el color del texto */
+        select, select option {
+            background-color: #b3c7e6; /* Cambia este color al que prefieras */
+            color: #fff; /* Mantiene las letras blancas */
+        }
 
-.info-section {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+        .info-section {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
