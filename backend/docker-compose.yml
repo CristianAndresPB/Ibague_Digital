@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  backend:
+    build: ./
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - JWT_SECRET=ibague_secret_2025
+      - JWT_EXPIRES=8h
+      - CORS_ORIGIN=*
+    volumes:
+      - ./db.sqlite:/app/db.sqlite
+      - ./:/app

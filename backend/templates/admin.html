@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin - Ibagué Digital</title>
+  <style>
+    body{font-family: Arial; padding:20px}
+    table{border-collapse:collapse; width:100%}
+    th,td{border:1px solid #ccc; padding:8px}
+    th{background:#f4f4f4}
+    .search{margin-bottom:10px}
+  </style>
+</head>
+<body>
+  <h1>Registros de encuestas</h1>
+  <input id="filter" class="search" placeholder="Filtrar por nombre/ciudad..." />
+  <button id="refresh">Refrescar</button>
+  <table id="tbl">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nombre</th><th>Edad</th><th>Ciudad</th><th>Medio</th><th>Horas/día</th><th>Comentarios</th><th>Creado</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    async function load() {
+      const res = await fetch('/api/respondents');
+      const data = await res.json();
+      window._data = data;
+      render(data);
+    }
+    function render(list) {
+      const tbody = document.querySelector('#tbl tbody');
+      tbody.innerHTML = '';
+      list.forEach(r=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${r.id}</td><td>${r.respondent_name||''}</td><td>${r.age}</td>
+          <td>${r.city}</td><td>${r.primary_media}</td><td>${r.hours_per_day}</td>
+          <td>${(r.comments||'').replace(/</g,'&lt;')}</td><td>${r.created_at||''}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+    document.getElementById('refresh').addEventListener('click', load);
+    document.getElementById('filter').addEventListener('input', function(){
+      const q = this.value.toLowerCase();
+      const filtered = (window._data||[]).filter(x =>
+        (x.respondent_name||'').toLowerCase().includes(q) ||
+        (x.city||'').toLowerCase().includes(q)
+      );
+      render(filtered);
+    });
+    load();
+  </script>
+</body>
+</html>
